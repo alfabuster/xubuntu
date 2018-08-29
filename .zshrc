@@ -5,7 +5,7 @@
 
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/den/.oh-my-zsh"
+export ZSH="/home/den/.oh-my-zsh"
 
 export TERM="xterm-256color"
 
@@ -15,6 +15,7 @@ export TERM="xterm-256color"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
+
 
 
 alias lc="colorls"
@@ -27,7 +28,7 @@ local user_symbol="   den "
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%K{white}%k"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%F{black}%K{red}%} $user_symbol%{%b%f%k%F{red}%} %{%f%} "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%F{black}%K{208}%} $user_symbol%{%b%f%k%F{208}%} %{%f%} "
 
 # Separators
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0b0'
@@ -43,18 +44,18 @@ POWERLEVEL9K_CONTEXT_TEMPLATE="%F{cyan}%n%f"
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='red'
 
 # Dirs
-POWERLEVEL9K_DIR_HOME_BACKGROUND='yellow'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='blue'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='yellow'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='blue'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='yellow'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='blue'
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # OS segment
 POWERLEVEL9K_OS_ICON_BACKGROUND="black"
-POWERLEVEL9K_OS_ICON_FOREGROUND="white"
+POWERLEVEL9K_OS_ICON_FOREGROUND="208"
 
 # VCS icons
 POWERLEVEL9K_VCS_GIT_ICON=$''
@@ -154,6 +155,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm node_version)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-syntax-highlighting
 )
 
 
@@ -201,4 +203,4 @@ alias merge='xrdb merge ~/.Xresources'
 
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+#export PATH=$PATH:$GOROOT/bin:$GOPATH/binsource /home/den/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
