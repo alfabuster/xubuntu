@@ -7,16 +7,7 @@ From 30.06.2018
 	</a>
 </p>
 
-How to install Polybar on Ubuntu 18.04
-
-wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
-
-sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu yakkety-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
-
-sudo apt update
-
-sudo apt install polybar
-
-sudo mkdir -p ~/.config/polybar
-
-sudo cp /usr/share/doc/polybar/config ~/.config/polybar/
+<h2> Xfce4-terminal </h2>
+Для корректной работы:
+<li> Шрифт nerd font (у меня Source Code Pro) </li>
+<li> <code> sudo gem install colorls</code> </li>
