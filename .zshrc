@@ -7,7 +7,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/den/.oh-my-zsh"
 
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
 
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -20,7 +20,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 alias lc="colorls"
 
-local user_symbol="   den "
+local user_symbol="   den "
 
 
 
@@ -196,7 +196,7 @@ plugins=(
 
 
 source $ZSH/oh-my-zsh.sh
-source /home/den/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/den/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias ls='colorls'
 
 alias merge='xrdb merge ~/.Xresources'
@@ -204,3 +204,7 @@ alias merge='xrdb merge ~/.Xresources'
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 #export PATH=$PATH:$GOROOT/bin:$GOPATH/binsource /home/den/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if [[ $TERMINIX_ID ]]; then
+        source /etc/profile.d/vte.sh
+fi
