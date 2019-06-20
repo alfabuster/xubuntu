@@ -12,5 +12,6 @@ From 30.06.2018
 <li> <code> sudo apt install zsh </code> </li>
 <li> Oh my zsh, тема powerlevel9k </li>
 <li> Шрифт nerd font (у меня Source Code Pro) </li>
+<li>install https://github.com/gabrielelana/awesome-terminal-fonts </li>
 <li> <code> sudo gem install colorls</code> </li>
 <li> Плагин zsh-syntax-highlighting </li>
