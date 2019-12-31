@@ -1,0 +1,88 @@
+ #Conky settings
+   background yes
+   update_interval 1
+
+   cpu_avg_samples 1
+   net_avg_samples 2
+
+   override_utf8_locale yes
+
+   double_buffer yes
+   no_buffers yes
+
+   text_buffer_size 32768
+   imlib_cache_size 0
+
+ #Window specifications
+   own_window yes
+   own_window_class Conky
+   own_window_type normal
+   own_window_argb_visual yes
+   own_window_argb_value 225
+   own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+   border_inner_margin 50
+  #border_outer_margin
+   own_window_transparent yes
+   own_window_colour black
+   minimum_size 400 700
+   maximum_width 700
+   alignment top_right
+   gap_x 0
+   gap_y 90
+
+ #Graphics settings
+   draw_shades no
+   draw_outline no
+   draw_borders no
+   draw_graph_borders no
+
+ #Text settings
+   use_xft yes
+   font Ubuntu Mono:size=10
+   xftalpha 0.8
+   uppercase no
+   default_color white
+
+ #CORRECT THIS PATH IF NOT WORKING
+   lua_load ~/.conky/conky-fsociety/clocks.lua
+   lua_draw_hook_pre clock_rings
+
+
+
+  #Settings Below TEXT are shown on the screen
+  TEXT
+
+  ${voffset -25}${offset 180}${font neuropol:size=20}${time %I:%M}${offset 4}${font Noto Sans ExtraCondensed SemiBold:size=13}$uptime
+  ${voffset 14}${offset 178}${color #e81178}${font Noto Sans ExtraCondensed SemiBold:size=14}${time %a, }${time %d %b, %y}
+  ##Replace 'wlp3s0' with name of your network interface
+  ${offset 122}${voffset 75}${color #FFFFFF}${font Noto Sans ExtraCondensed SemiBold:size=17}Dw${offset 14}${color #5657f5}${downspeed wlp3s0}
+  ##Replace 'wlp3s0' with name of your network interface
+  ${offset 118}${voffset 10}${color #FFFFFF}Up${offset 17}${color #5657f5}${upspeed wlp3s0}
+  ##Replace 'wlp3s0' with name of your network interface
+  ${offset 120}${voffset 5}${font Noto Sans ExtraCondensed SemiBold:size=15}${color #E81178}TDown${offset 14}${color #d6b195}${totaldown wlp3s0}
+  ${offset 70}${voffset 110}${font Noto Sans ExtraCondensed SemiBold:size=15}${color #fdd75a}CPU
+  ${offset 188}${voffset 35}${font Roboto-Regular:size=9}Core 1
+  ${offset 234}${voffset -13}Core 2
+  ${offset 204}${voffset 2}${cpu cpu1}%
+  ${offset 242}${voffset -13}${cpu cpu2}%
+
+  ${offset 1}${voffset -32}${font Noto Sans ExtraCondensed SemiBold:size=14}
+  ${offset -50} $mem / ${color  #E81178}$memmax
+  ${offset 43}${color #d6b195}[$memperc%]
+  ${offset 93}${voffset 0}${color  #5657f5}${font Noto Sans ExtraCondensed SemiBold:size=14}MEM
+  ${voffset -20}${offset 230}${font Roboto-Regular:size=11}${color #FFFFFF}
+  ${offset 221}${top_mem name 1}${alignr}${top mem 1} %
+  ${offset 221}${top_mem name 2}${alignr}${top mem 2} %
+  ${offset 221}${top_mem name 3}${alignr}${top mem 3} %
+  ${offset 221}${top_mem name 4}${alignr}${top mem 4} %
+  ${offset 221}${top_mem name 5}${alignr}${top mem 5} %
+
+
+  ##${offset 205}${voffset 17}${color #ffffff}${font Roboto-Bold:size=14}AUDACIOUS
+  ##${offset 120}${color #ad1a26}${font Roboto-Bold:size=9}${audacious_title 30} ${audacious_position}/${audacious_length}
+  ##${offset 120}${color 0x607d8c}${audacious_bar 4,270}
+  
+
+  ##CORRECT THIS PATH IF NOT WORKING
+  ${image ~/.conky/conky-fsociety/iconfinder_WiFi_4074106.png -p 280,130 -s 110x110}
